@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Portfolio</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <!-- <a href="#services">Services</a> -->
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="flex items-center justify-between">
+            <div class="flex-1">
+                <h1>Hello, I'm <span>CHIKKU ANI JOHN</span></h1>
+                <p>Web Developer</p>
+                <a href="#contact" class="btn btn-primary">Hire Me</a>
+            </div>
+            <div class="flex-1">
+                <img src="static/images/hero-image.png" alt="Hero Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about container">
+        <div class="flex items-center">
+            <div class="flex-1">
+                <h1>About <span>Me</span></h1>
+                <p>I'm a passionate developer with a love for learning and creating impactful projects.</p>
+                <div class="social">
+                    <a href="#"><img src="https://github.com/chikkuanijohn" alt="GitHub"></a>
+                    <a href="#"><img src="static/images/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="flex-1">
+                <img src="static/images/about-image.jpg" alt="About Me">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h1>My <span>Services</span></h1>
+        <div class="card-wrapper container">
+            <div class="card">
+                <img src="static/images/web-design.png" alt="Web Design">
+                <h2>Web Design</h2>
+                <p>Creative and modern designs tailored to your needs.</p>
+            </div>
+            <div class="card">
+                <img src="static/images/web-development.png" alt="Web Development">
+                <h2>Web Development</h2>
+                <p>Robust and scalable web applications.</p>
+            </div>
+            <div class="card">
+                <img src="static/images/api.png" alt="API Development">
+                <h2>API Development</h2>
+                <p>Efficient and secure APIs for seamless integrations.</p>
+            </div>
+        </div>
+    </section>
+-----------------------------
+    <!-- Resume Section -->
+    <section id="resume" class="resume container">
+     <h1>My <span>Resume</span></h1>
+ <div class="resume">
+        <div class="section summary">
+            <h2>Summary</h2>
+            <h3>CHIKKU ANI JOHN</h3>
+            <p>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</p>
+            <ul>
+                <li>Portland par 127, Orlando, FL</li>
+                <li>+91 9778230062</li>
+                <li>chikkuanijohn1@gmail.com</li>
+            </ul>
+        </div>
+        <div class="section education">
+            <h2>Education</h2>
+            <h3>BACHELOR OF  TECHNOLOGY IN COMPUTER SCIENCE</h3>
+            <p><strong>2020 - 2024</strong><br>
+                Ponnaiyah Ramajayam Institute of Science and Technology,Thanjavur, Tamil Nadu. 
+            </p>
+            <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatem qui ut dignissimos deleniti neque.</p>
+        </div> -->
+        <div class="section experience">
+            <h2>Professional Experience</h2>
+            <h3>SENIOR GRAPHIC DESIGN SPECIALIST</h3>
+            <p><strong>2019 - Present</strong><br>
+               Experion, New York, NY</p>
+            <ul>
+                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials.</li>
+                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.</li>
+                <li>Supervise the assessment of all graphic materials to ensure quality and accuracy of the design.</li>
+                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000.</li>
+            </ul>
+            <h3>GRAPHIC DESIGN SPECIALIST</h3>
+            <p><strong>2017 - 2018</strong><br>
+               Stepping Stone Advertising, New York, NY</p>
+        </div>
+    </div>
+
+---------------------------
+    <!-- Contact Section -->
+    <section id="contact" class="contact container">
+        <h1>Contact <span>Me</span></h1>
+        <form action="#" method="POST">
+            <div class="input-wrap">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="input-wrap-2">
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-logo">Portfolio</div>
+        <div class="footer-socials">
+            <a href="#"><img src="static/images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="static/images/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="static/images/instagram.png" alt="Instagram"></a>
+        </div>
+        <p class="copyright">&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
