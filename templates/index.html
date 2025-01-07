@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .nav-links a {
+            margin: 0 15px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .nav-links a:hover {
+            color: #ffdd59;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 0;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h1 span {
+            color: #007bff;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero-image img {
+            max-width: 400px;
+            border-radius: 15px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 50px 0;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .about h1 span {
+            color: #007bff;
+        }
+
+        .about-image img {
+            max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .social img {
+            margin: 0 10px;
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Resume Section */
+        .resume {
+            background: #f9f9f9;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .resume h1 span {
+            color: #007bff;
+        }
+
+        .resume-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .resume-card {
+            background: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .resume-card h3 {
+            color: #007bff;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .projects h1 span {
+            color: #007bff;
+        }
+
+        .projects-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .project-card h3 {
+            color: #007bff;
+        }
+
+        .project-card p {
+            margin: 10px 0;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .input-wrap, .input-wrap-2 {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .footer-socials img {
+            margin: 0 10px;
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">CHIKKU</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#resume">Resume</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hello, I'm <span>CHIKKU ANI JOHN</span></h1>
+                <p>Fresher | Full Stack Developer | Passionate Creator</p>
+                <a href="#contact" class="btn">Hire Me</a>
+            </div>
+            <div class="hero-image">
+                <img src="{{ url_for('static',filename='images/portfolioimg1.jpg') }}" alt="Hero Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about container">
+        <div class="about-text">
+            <h1>About <span>Me</span></h1>
+            <p>
+                I’m a passionate web developer with experience in creating responsive, user-friendly applications. My journey involves mastering technologies like Python,Django, Flask, React, and more.
+            </p>
+            <div class="social">
+                <a href="https://github.com/chikkuanijohn" class="btn" target="_blank" rel="noopener noreferrer">View Github</a>
+                <a href="https://www.linkedin.com/in/chikku-ani-john-89ab0b296" class="btn" target="_blank" rel="noopener noreferrer">View Linkedin</a>
+            </div>
+        </div>
+
+        
+        <div class="about-image">
+            <img src="{{ url_for('static',filename='images/portimg2.jpg') }}" alt="About Me">
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <h1>My <span>Resume</span></h1>
+        <!-- <div class="resume-content">
+            <div class="resume-card">
+                <h3>Python Full Stack Developer</h3>
+                <p><strong>June 2024 - December 2024</strong><br>Synnefo Solutions, Kochi</p>
+            </div>
+            <div class="resume-card">
+                <h3>B.Tech in Computer Science</h3>
+                <p><strong>2020 - 2024</strong><br>Ponnaiyah Ramajayam Institute of Science and Technology, Thanjavur</p>
+            </div>
+            <div class="resume-card">
+                <h3>Skills</h3>
+                <p>Python, HTML, CSS, Bootstrap, JavaScript, React, REST APIs, Flask, Django</p>
+            </div>
+        </div> -->
+
+
+        <div class="about-image">
+            <a href="{{ url_for('static',filename='images/CHIKKU ANI JOHN_CV-6.pdf') }}" class="btn" target="_blank" rel="noopener noreferrer">View Resume</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects container">
+        <h1>My <span>Projects</span></h1>
+        <div class="projects-content">
+            <div class="project-card">
+                <h3>E-Commerce Platform</h3>
+                <p>A responsive e-commerce website with user authentication, product management.</p>
+                <p><strong>Technologies:</strong>HTML,CSS,Bootstrap,Django,Sqlite3</p>
+                <a href="https://github.com/chikkuanijohn/e-commercee" class="btn" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>This personal portfolio showcases my skills, projects, and contact details in a clean and responsive design.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, Flask</p>
+                <a href="https://github.com/chikkuanijohn/portfolio_" class="btn" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Booking Website</h3>
+                <p>An online booking platform with Doctors, Patients, and Admin roles for managing appointments and users.</p>
+                <p><strong>Technologies:</strong>HTML,CSS,Django,Sqlite3</p>
+                <a href="https://github.com/chikkuanijohn/Doctor_appointment" class="btn" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section  -->
+     <section id="contact" class="contact">
+        <h1>Contact <span>Me</span></h1>
+        <form action="#" method="POST">
+            <div class="input-wrap">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="input-wrap-2">
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+
+
+
+   
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-logo">Portfolio</div>
+        <div class="footer-socials">
+            <a href="#"><img src="static/images/facebook(1).png" alt="Facebook"></a>
+            <a href="#"><img src="static/images/twitter(1).png" alt="Twitter"></a>
+            <a href="#"><img src="static/images/instagram(1).png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2025 Chikku Ani John. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>           
+            
