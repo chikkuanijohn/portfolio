@@ -1,38 +1,40 @@
-from flask import Flask,render_template,redirect,request,url_for
-app=Flask(__name__)
+from flask import Flask, render_template, request, redirect
 import sqlite3
 
-con = sqlite3.connect('data.db') 
-try:
-    con.execute('''
-        CREATE TABLE IF NOT EXISTS users (
-            name TEXT NOT NULL,
-            email  TEXT NOT NULL,
-            msg  TEXT NOT NULL
-        )
-    ''')
-except:
-    pass    
+app = Flask(__name__)
 
 @app.route('/')
-def fun1():
+def home():
     return render_template('index.html')
 
+@app.route('/submit', methods=['POST'])
+def submit_form():
+    name = request.form['name']
+    email = request.form['email']
+    message = request.form['message']
 
+    # Store data in the database
+    conn = sqlite3.connect('data.db')
+    cursor = conn.cursor()
+    cursor.execute('''CREATE TABLE IF NOT EXISTS contact (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        name TEXT NOT NULL,
+                        email TEXT NOT NULL,
+                        message TEXT NOT NULL)''')
+    cursor.execute("INSERT INTO contact (name, email, message) VALUES (?, ?, ?)", (name, email, message))
+    conn.commit()
+    conn.close()
 
+    return redirect('/data')
 
-@app.route('/index',methods=['POST'])
-def fun2():
-    if request.method=='POST':
-        name=request.form['name']
-        email=request.form['email']
-        msg=request.form['Message']
+@app.route('/data')
+def view_data():
+    conn = sqlite3.connect('data.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM contact")
+    rows = cursor.fetchall()
+    conn.close()
+    return render_template('index.html', rows=rows)
 
-        con = sqlite3.connect('data.db')
-        con.execute('INSERT INTO users (name,email,msg) VALUES (?,?,?,?)', (name,email,msg))
-        con.commit()
-        con.close()
-        print(name,email,msg)
-        return redirect(url_for('fun1'))
-
-app.run()
+if __name__ == '__main__':
+    app.run(debug=True)
