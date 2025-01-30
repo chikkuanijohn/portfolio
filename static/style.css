@@ -259,8 +259,8 @@ header .nav-links a:hover {
 }
 
 /* Footer Section */
-footer {
-    background-color: #333; /* Dark footer for strong contrast */
+/* footer {
+    background-color: #333; 
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -279,4 +279,16 @@ footer .footer-socials a {
 footer .footer-socials img {
     width: 25px;
     height: 25px;
+} */
+----------------------
+/* Footer */
+footer {
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 50px;
 }
