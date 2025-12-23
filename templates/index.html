@@ -1,529 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Chikku Ani John</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chikku Ani John | Python Full-Stack Developer</title>
 
-        body {
-            background: #121212;
-            color: white;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #1e1e1e;
-            padding: 15px 20px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+body{
+  background:#f4f6f8;
+  color:#1f2937;
+  line-height:1.6;
+}
 
-        nav .logo a {
-            color: #17a2b8;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-        }
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 60px;
+  border-bottom:1px solid #e5e7eb;
+  z-index:1000;
+}
+nav h2{color:#1d4ed8;font-size:20px}
+nav a{
+  margin-left:28px;
+  text-decoration:none;
+  color:#374151;
+  font-size:15px;
+}
+nav a:hover{color:#1d4ed8}
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
+/* HERO */
+#home{
+  padding-top:120px;
+  padding-bottom:80px;
+  text-align:center;
+}
+.hero{
+  background:#fff;
+  max-width:720px;
+  margin:auto;
+  padding:50px;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+}
+.hero img{
+  width:130px;
+  border-radius:50%;
+  margin-bottom:20px;
+}
+.hero h1 span{color:#1d4ed8}
+.hero p{color:#4b5563}
 
-        .nav-links li {
-            margin: 0 15px;
-        }
+/* SECTION */
+section{padding:70px 20px}
+h2{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:35px;
+}
 
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            transition: 0.3s;
-        }
+/* CARD */
+.card{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:30px;
+  max-width:900px;
+  margin:auto;
+}
 
-        .nav-links a:hover {
-            color: #17a2b8;
-        }
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 18px;
+  background:#1d4ed8;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-size:14px;
+}
 
-        .menu-icon {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-            color: white;
-        }
+/* SKILLS */
+.skills{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:15px;
+}
+.skill{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  padding:14px;
+  text-align:center;
+  border-radius:8px;
+  font-size:14px;
+}
 
-        @media (max-width: 768px) {
-            .menu-icon {
-                display: block;
-            }
+/* EXPERIENCE */
+.experience-item{
+  margin-bottom:25px;
+}
+.experience-item h3{font-size:18px}
+.experience-item span{
+  font-size:14px;
+  color:#6b7280;
+}
+.experience-item ul{
+  margin-top:10px;
+  padding-left:20px;
+}
+.experience-item li{
+  font-size:14px;
+  margin-bottom:6px;
+}
 
-            .nav-links {
-                flex-direction: column;
-                display: none;
-                width: 100%;
-                text-align: center;
-                background: #1e1e1e;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                padding: 10px 0;
-            }
+/* PROJECTS */
+.projects{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+.project{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  overflow:hidden;
+}
+.project img{width:100%}
+.project div{padding:18px}
+.project p{font-size:14px;color:#4b5563}
 
-            .nav-links li {
-                margin: 10px 0;
-            }
+/* CONTACT */
+.contact{
+  max-width:700px;
+  margin:auto;
+  background:#fff;
+  padding:35px;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+}
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:15px;
+}
+.contact-item a{
+  color:#1d4ed8;
+  text-decoration:none;
+}
 
-            .nav-active {
-                display: flex;
-            }
-        }
-
-        /* Hero Section */
-        #home {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .profile-image {
-            width: 160px;
-            border-radius: 50%;
-            border: 4px solid #17a2b8;
-            margin-bottom: 20px;
-        }
-
-        /* Sections */
-        section {
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-            color: #17a2b8;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h2 {
-                font-size: 24px;
-            }
-            .profile-image {
-                width: 120px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <div class="logo"><a href="#">Chikku</a></div>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="home">
-        <img src="{{ url_for('static', filename='images/me.jpg') }}" alt="Profile Image" class="profile-image">
-        <h1>Hi, I'm <strong>CHIKKU ANI JOHN</strong></h1>
-        <p>Fresher | Python Full-Stack Developer | Passionate Creator</p>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a B.Tech graduate and a passionate Python Full-Stack Developer with expertise in Python, Django, JavaScript, and modern web technologies. I specialize in building dynamic and scalable web applications, combining strong backend logic with intuitive frontend designs. With a keen eye for detail and a problem-solving mindset, I am always eager to learn, innovate, and contribute to impactful projects.</p>
-        <a href="{{ url_for('static',filename='images/CHIKKU ANI JOHN_CV-3.pdf') }}" download="Chikku_Ani_John_Resume.pdf" class="resume-btn">📄 Download Resume</a>
-    </section>
-
-    <script>
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('nav-active');
-        }
-    </script>
- <style>
-    /* Style for the Skills Section */
-    #skills {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .skills-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        padding: 0;
-    }
-
-    .skill-item {
-        background: linear-gradient(135deg, #007bff, #00d4ff);
-        color: white;
-        padding: 8px 15px;
-        border-radius: 20px;
-        font-size: 14px;
-        font-weight: bold;
-        display: inline-block;
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        white-space: nowrap;
-    }
-
-    /* Hover Effect */
-    .skill-item:hover {
-        transform: scale(1.1);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-        .skills-container {
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-item {
-            font-size: 13px;
-            padding: 6px 12px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .skills-container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .skill-item {
-            width: auto;
-            padding: 8px 15px;
-        }
-    }
+/* FOOTER */
+footer{
+  background:#fff;
+  border-top:1px solid #e5e7eb;
+  text-align:center;
+  padding:18px;
+  font-size:14px;
+  color:#6b7280;
+}
 </style>
 </head>
+
 <body>
+
+<nav>
+  <h2>Chikku Ani John</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="hero">
+    <img src="{{ url_for('static', filename='images/chikkupic.jpg') }}">
+    <h1>Chikku <span>Ani John</span></h1>
+    <p>Web Developer</p>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+    Dedicated and motivated Computer Science graduate with hands-on experience in
+    Python full-stack development. Skilled in building responsive and user-friendly
+    web applications using Django, Flask, React, HTML, CSS, and JavaScript.
+    Experienced in developing real-world projects including e-commerce platforms
+    and frontend applications. Passionate about learning new technologies,
+    writing clean code, and contributing to meaningful software solutions.
+  </p>
+    <a class="btn" href="{{ url_for('static', filename='resume.pdf') }}" download>
+      Download Resume
+    </a>
+  </div>
+</section>
+
 <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-        <span class="skill-item">Python & Django</span>
-        <span class="skill-item">HTML & CSS</span>
-        <span class="skill-item">Bootstrap</span>
-        <span class="skill-item">JavaScript, React & RestAPI</span>
-        <span class="skill-item">Flask</span>
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <div class="skill">Python</div>
+    <div class="skill">Django</div>
+    <div class="skill">HTML & CSS</div>
+    <div class="skill">Bootstrap</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">React</div>
+    <div class="skill">Flask</div>
+    <div class="skill">REST API</div>
+    <div class="skill">MYSQL</div>
+    <div class="skill">SQLite3</div>
+    <div class="skill">GitHub</div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <div class="experience-item">
+      <h3>Voice Process Executive – Aabasoft Technologies,Kochi</h3>
+      <span>May 2025 – November 2025</span>
+      <ul>
+        <li>Handled daily process operations and ensured timely completion of assigned tasks.</li>
+        <li>Supported customer interactions by addressing calls, clarifying queries, and providing accurate information.</li>
+        <li>Ensured smooth workflow within the team through clear communication and task coordination</li>
+        <li>Assisted in resolving customer and process-related issues promptly.</li>
+      <li>Contributed to improving process efficiency by identifying issues and suggesting practical solutions.</li>
+      </ul>
     </div>
+  </div>
 </section>
 
-<style>
-    /* Portfolio Section Styling */
-    #portfolio {
-        padding: 40px 20px;
-        text-align: center;
-        background-color: #f9f9f9;
-    }
+<!-- PROJECTS (3 PROJECTS) -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
 
-    .projects {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-        max-width: 1100px;
-        margin: auto;
-    }
-
-    .project {
-        background: white;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-
-    .project:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .project-img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-
-    .project h3 {
-        font-size: 18px;
-        margin: 10px 0;
-        color: #333;
-    }
-
-    .project p {
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 15px;
-    }
-
-    .resume-btn {
-        display: inline-block;
-        padding: 8px 12px;
-        margin: 5px;
-        background: #007bff;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 14px;
-        transition: background 0.3s;
-    }
-
-    .resume-btn:hover {
-        background: #0056b3;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .projects {
-            grid-template-columns: 1fr;
-        }
-
-        .project {
-            padding: 12px;
-        }
-
-        .project h3 {
-            font-size: 16px;
-        }
-
-        .project p {
-            font-size: 13px;
-        }
-
-        .resume-btn {
-            font-size: 13px;
-            padding: 6px 10px;
-        }
-    }
-
-</style>
-</head>
-<body>
-
-<!-- Portfolio Section -->
-<section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="projects">
-        <!-- Project 1 -->
-        <div class="project">
-            <img src="{{url_for('static',filename='images/prt2.jpg') }}" alt="E-Commerce Website" class="project-img">
-            <h3>Project 1: E-Commerce Website</h3>
-            <p>A responsive e-commerce website with user authentication, product management using HTML, CSS, Bootstrap, Django.</p>
-            <!-- <a href="https://your-live-demo-link.com" target="_blank" class="resume-btn">Live Demo</a> -->
-            <a href="https://github.com/chikkuanijohn/watch_website" target="_blank" class="resume-btn">GitHub</a>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project">
-            <img src="{{url_for('static',filename='images/prt1.jpg') }}" alt="Booking Website" class="project-img">
-            <h3>Project 2: Booking Website</h3>
-            <p>An online booking platform with Doctors, Patients, and Admin roles for managing appointments and users using HTML, CSS, Django, and JavaScript.</p>
-            <!-- <a href="https://your-live-demo-link.com" target="_blank" class="resume-btn">Live Demo</a> -->
-            <a href="https://github.com/chikkuanijohn/Doctor_appointments_" target="_blank" class="resume-btn">GitHub</a>
-        </div>
+    <!-- Project 1 -->
+    <div class="project">
+      <img src="{{url_for('static',filename='images/ecompic.jpg')}}">
+      <div>
+        <h3>E-Commerce Website</h3>
+        <p>
+        Developed a Django-based shopping website with product listing, cart, checkout, user authentication, and admin product management using HTML, CSS, JavaScript, and SQLite3.
+        </p>
+        <a class="btn" href="https://github.com/chikkuanijohn/ecom_web.git" target="_blank">
+          View on GitHub
+        </a>
+      </div>
     </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+      <img src="{{url_for('static',filename='images/bookmyshowpic.png')}}">
+      <div>
+        <h3>BookMyShow (Frontend)</h3>
+        <p>
+        Developed a responsive BookMyShow frontend clone using HTML, CSS, and Bootstrap with movie listings, banners, and mobile-friendly layouts.
+        </p>
+        <a class="btn" href="https://github.com/chikkuanijohn/Bookmyshow.git" target="_blank">
+          View on GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <img src="{{url_for('static',filename='images/figmaimg.png')}}">
+      <div>
+        <h3>Figma to React Landing Page (Frontend)</h3>
+        <p>
+         Developed a responsive landing page using React and Vite by converting a Figma design into a clean, component-based UI with JSX and CSS.
+        </p>
+        <a class="btn" href="https://github.com/chikkuanijohn" target="_blank">
+          View on GitHub
+        </a>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-
-
-        <style>
-            /* Contact Section */
-            #contact {
-                padding: 40px 20px;
-                text-align: center;
-                background-color: #f9f9f9;
-            }
-    
-            .contact-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-                max-width: 800px;
-                margin: auto;
-                background: white;
-                padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }
-    
-            /* Contact Form */
-            form {
-                flex: 1 1 300px;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-    
-            input, textarea {
-                width: 100%;
-                padding: 10px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                font-size: 14px;
-            }
-    
-            button {
-                background: #007bff;
-                color: white;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 16px;
-                transition: background 0.3s;
-            }
-    
-            button:hover {
-                background: #0056b3;
-            }
-    
-            /* Email Link Below Form */
-            .email-link {
-                margin-top: 10px;
-                font-size: 16px;
-                color: #007bff;
-                text-decoration: none;
-                font-weight: bold;
-                transition: color 0.3s;
-            }
-    
-            .email-link:hover {
-                color: #0056b3;
-            }
-    
-            /* Social Links */
-            .social-links {
-                flex: 1 1 300px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-    
-            .social-links a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-decoration: none;
-                color: white;
-                font-size: 16px;
-                font-weight: bold;
-                background: #007bff;
-                padding: 8px 12px;
-                border-radius: 5px;
-                width: 100%;
-                max-width: 280px;
-                transition: background 0.3s, transform 0.2s;
-            }
-    
-            .social-links a:hover {
-                background: #0056b3;
-                transform: scale(1.05);
-            }
-    
-            /* Responsive Design */
-            @media (max-width: 768px) {
-                .contact-container {
-                    flex-direction: column;
-                    padding: 15px;
-                }
-    
-                .social-links a {
-                    font-size: 14px;
-                    padding: 8px;
-                }
-    
-                .email-link {
-                    font-size: 14px;
-                }
-            }
-        </style>
-    </head>
-    <body>
-    
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <div class="contact-container">
-                <!-- Contact Form -->
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit">Send</button>
-                    <a href="mailto:chikkuanijohn1@gmail.com" class="email-link">📧 chikkuanijohn1@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/chikku-ani-john-89ab0b296" target="_blank">https://www.linkedin.com/in/chikku-ani-john-89ab0b296</a>
-
-                
-                    <a href="https://github.com/chikkuanijohn" target="_blank">💻 https://github.com/chikkuanijohn</a>
-                </form> 
-    
-                
-            </div>
-        </section>
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact">
+    <div class="contact-item">
+      <i class="fa-solid fa-envelope"></i>
+      <a href="mailto:chikkuanijohn1@gmail.com">chikkuanijohn1@gmail.com</a>
+    </div>
+    <div class="contact-item">
+      <i class="fa-brands fa-linkedin"></i>
+      <a href="https://www.linkedin.com/in/chikku-ani-john-89ab0b296" target="_blank">
+        LinkedIn Profile
+      </a>
+    </div>
+    <div class="contact-item">
+      <i class="fa-brands fa-github"></i>
+      <a href="https://github.com/chikkuanijohn" target="_blank">
+        GitHub Profile
+      </a>
+    </div>
+  </div>
 </section>
 
-<style>
-    /* Footer Styles */
-    footer {
-        background: #333;
-        color: white;
-        text-align: center;
-        padding: 15px 20px;
-        font-size: 16px;
-        font-weight: 500;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        footer {
-            font-size: 14px;
-            padding: 12px;
-        }
-    }
-</style>
-</head>
-<body>
-
-<!-- Footer Section -->
 <footer>
-    <p>&copy; 2024 CHIKKU ANI JOHN | Python Full-Stack Developer</p>
+  © 2025 Chikku Ani John | Web Developer
 </footer>
+
 </body>
 </html>
